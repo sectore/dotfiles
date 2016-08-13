@@ -51,7 +51,7 @@
 
 ;; Disable autocompletion and trigger completion manually
 (setq company-idle-delay nil)
-(global-set-key (kbd "C-SPC") 'company-complete)
+(global-set-key (kbd "C-c SPC") 'company-complete)
 
 ;; font
 (set-frame-font "Source Code Pro-14")
