@@ -2,5 +2,5 @@ templates:
   params:
     author-email: email@jkrause.io
     author-name: Jens Krause
-    copyright: MIT
+    copyright: 2016 Jens Krause
     github-username: sectore
