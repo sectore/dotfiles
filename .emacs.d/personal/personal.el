@@ -18,6 +18,8 @@
 
 ;; elm
 (require 'elm-mode)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
 
 ;; purescript
 ;; specify path to the 'psc-ide' executable
