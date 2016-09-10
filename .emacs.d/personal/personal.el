@@ -7,10 +7,32 @@
 ;;; Code:
 
 
+;; god mode
+;; https://github.com/chrisdone/god-mode
+
+(require 'god-mode)
+(global-set-key (kbd "<escape>") 'god-local-mode)
+(setq god-exempt-major-modes nil)
+(setq god-exempt-predicates nil)
+
+(defun my-update-cursor ()
+  (setq cursor-type (if (or god-local-mode buffer-read-only)
+                        'box
+                      'bar)))
+
+(add-hook 'god-mode-enabled-hook 'my-update-cursor)
+(add-hook 'god-mode-disabled-hook 'my-update-cursor)
+(add-hook 'god-mode-disabled-hook 'my-update-cursor)
+
+(require 'god-mode-isearch)
+(define-key isearch-mode-map (kbd "<escape>") 'god-mode-isearch-activate)
+(define-key god-mode-isearch-map (kbd "<escape>") 'god-mode-isearch-disable)
+
 ;; ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-;; Major modes
+;; language support
 
 ;; haskell
+
 ;; (unless (package-installed-p 'intero)
 ;;     (package-install 'intero))
 
@@ -69,13 +91,10 @@
             (turn-on-purescript-indentation)))
 
 ;; ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-;; Minor modes
+;; misc
 
 ;; markdown
 (add-hook 'markdown-mode-hook 'pandoc-mode)
-
-;; ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-;; misc. configuration
 
 ;; keys
 ;; Disable option modifier to get alt+number using a German keyboard
@@ -92,8 +111,7 @@
 ;; (global-set-key (kbd "C-c SPC") 'company-complete)
 
 ;; font
-(set-frame-font "Source Code Pro-14")
-
+(set-frame-font "Source Code Pro-15")
 
 ;; show line numbers
 (global-linum-mode)
