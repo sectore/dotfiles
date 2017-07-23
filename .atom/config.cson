@@ -2,6 +2,8 @@
   core:
     disabledPackages: [
       "ide-haskell-repl"
+      "exception-reporting"
+      "metrics"
     ]
     excludeVcsIgnoredPaths: false
     telemetryConsent: "no"
@@ -9,12 +11,15 @@
     fontSize: 5
     showInvisibles: true
   "exception-reporting":
-    userId: "c734eb6f-e6b6-4b8a-abf7-95b3948f97a2"
+    userId: ""
   "haskell-ghc-mod":
     onMouseHoverShow: ""
   "ide-purescript":
     addNpmPath: true
     autocomplete: {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   welcome:
     showOnStartup: false
 ".psci.purescript.source":
