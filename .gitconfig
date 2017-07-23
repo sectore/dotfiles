@@ -4,3 +4,5 @@
 	signingkey = 3B2FAFBCEFA5906D
 [push]
 	default = simple
+[core]
+	editor = vim
