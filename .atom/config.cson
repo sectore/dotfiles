@@ -1,0 +1,26 @@
+"*":
+  core:
+    disabledPackages: [
+      "ide-haskell-repl"
+    ]
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "no"
+  editor:
+    fontSize: 5
+    showInvisibles: true
+  "exception-reporting":
+    userId: "c734eb6f-e6b6-4b8a-abf7-95b3948f97a2"
+  "haskell-ghc-mod":
+    onMouseHoverShow: ""
+  "ide-purescript":
+    addNpmPath: true
+    autocomplete: {}
+  welcome:
+    showOnStartup: false
+".psci.purescript.source":
+  editor:
+    tabLength: 4
+".purescript.source":
+  editor:
+    autoIndentOnPaste: true
+    showIndentGuide: true
