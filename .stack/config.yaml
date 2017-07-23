@@ -15,4 +15,8 @@ templates:
 
 nix:
   enable: true
-  # packages: [git, zlib]
+  # enable: false
+  # packages:
+  #   - git
+  #   - ncurses
+  #   - zlib
