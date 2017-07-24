@@ -4,6 +4,7 @@ packages: [
   "busy-signal"
   "git-plus"
   "haskell-ghc-mod"
+  "highlight-selected"
   "ide-haskell"
   "ide-haskell-cabal"
   "ide-haskell-repl"
@@ -18,6 +19,10 @@ packages: [
   "linter"
   "linter-hlint"
   "linter-ui-default"
+  "minimap"
+  "minimap-cursorline"
+  "minimap-find-and-replace"
+  "minimap-highlight-selected"
   "package-sync"
   "vim-mode-plus"
 ]

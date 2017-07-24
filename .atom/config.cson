@@ -12,11 +12,28 @@
     showInvisibles: true
   "exception-reporting":
     userId: ""
+  "git-diff":
+    showIconsInEditorGutter: true
   "haskell-ghc-mod":
     onMouseHoverShow: ""
   "ide-purescript":
     addNpmPath: true
     autocomplete: {}
+    pscIdeServerExe: "/home/jk/.psvm/current/bin/psc-ide-server"
+    pursExe: "/home/jk/.psvm/current/bin/purs"
+    useCombinedExe: false
+  "linter-ui-default":
+    panelHeight: 69
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "package-sync":
     createOnChange: true
     forceOverwrite: true
