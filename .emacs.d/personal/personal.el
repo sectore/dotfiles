@@ -15,3 +15,20 @@
 
 ;; Highlight current line
 (global-hl-line-mode 0)
+
+;; Install Intero
+; (package-install 'intero)
+; (add-hook 'haskell-mode-hook 'intero-mode)
+
+;; PureScript
+(require 'psc-ide)
+
+(add-hook 'purescript-mode-hook
+  (lambda ()
+    (psc-ide-mode)
+    (company-mode)
+    (flycheck-mode)
+    (turn-on-purescript-indentation)))
+
+;; nix
+(require 'nix-mode)
