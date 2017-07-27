@@ -23,6 +23,8 @@ packages: [
   "minimap-cursorline"
   "minimap-find-and-replace"
   "minimap-highlight-selected"
+  "nix"
   "package-sync"
+  "pretty-json"
   "vim-mode-plus"
 ]

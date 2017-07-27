@@ -5,15 +5,13 @@
       "exception-reporting"
       "metrics"
     ]
-    excludeVcsIgnoredPaths: false
     telemetryConsent: "no"
   editor:
     fontSize: 5
     showInvisibles: true
   "exception-reporting":
     userId: ""
-  "git-diff":
-    showIconsInEditorGutter: true
+  "git-diff": {}
   "haskell-ghc-mod":
     onMouseHoverShow: ""
   "ide-purescript":
@@ -24,6 +22,7 @@
     useCombinedExe: false
   "linter-ui-default":
     panelHeight: 69
+    showPanel: true
   minimap:
     plugins:
       cursorline: true
@@ -37,6 +36,8 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "vim-mode-plus":
+    startInInsertMode: true
   welcome:
     showOnStartup: false
 ".psci.purescript.source":
