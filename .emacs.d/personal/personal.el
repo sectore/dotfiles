@@ -17,8 +17,8 @@
 (global-hl-line-mode 0)
 
 ;; Install Intero
-; (package-install 'intero)
-; (add-hook 'haskell-mode-hook 'intero-mode)
+(require  'intero)
+(add-hook 'haskell-mode-hook 'intero-mode)
 
 ;; PureScript
 (require 'psc-ide)
