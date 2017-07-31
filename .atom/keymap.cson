@@ -34,3 +34,9 @@
 # tree view
 '.platform-linux':
   'ctrl-alt-r': 'tree-view:reveal-active-file'
+
+# haskell ide
+'atom-text-editor[data-grammar~="haskell"]':
+  'ctrl-cmd-i': 'haskell-ghc-mod:show-info'
+  'ctrl-cmd-t': 'haskell-ghc-mod:show-type'
+  'ctrl-cmd-g': 'haskell-ghc-mod:go-to-declaration'
