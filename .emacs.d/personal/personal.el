@@ -17,11 +17,11 @@
 (global-hl-line-mode 0)
 
 ;; Install Intero
-(require  'intero)
+(package-install 'intero)
 (add-hook 'haskell-mode-hook 'intero-mode)
 
 ;; PureScript
-(require 'psc-ide)
+(package-install 'psc-ide)
 
 (add-hook 'purescript-mode-hook
   (lambda ()
@@ -31,4 +31,4 @@
     (turn-on-purescript-indentation)))
 
 ;; nix
-(require 'nix-mode)
+(package-install 'nix-mode)
