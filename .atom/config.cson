@@ -4,10 +4,11 @@
       "ide-haskell-repl"
       "exception-reporting"
       "metrics"
+      "linter-hlint"
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 5
+    fontSize: 6
     showInvisibles: true
   "exception-reporting":
     userId: ""
@@ -20,6 +21,7 @@
     pscIdeServerExe: "/home/jk/.psvm/current/bin/psc-ide-server"
     pursExe: "/home/jk/.psvm/current/bin/purs"
     useCombinedExe: false
+  "linter-hlint": {}
   "linter-ui-default":
     panelHeight: 69
     showPanel: true
