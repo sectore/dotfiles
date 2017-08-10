@@ -9,26 +9,20 @@
  * http://lesscss.org
  */
 
-
 /*
  * Examples
  * (To see them, uncomment and save)
  */
+@font-size: 17px;
 
-// style the background color of the tree view
 .tree-view {
-  // background-color: whitesmoke;
-  font-size: 17px;
+  font-size: @font-size;
 }
 
-// style the background and foreground colors on the atom-text-editor-element itself
 atom-text-editor {
-  // color: white;
-  // background-color: hsl(180, 24%, 12%);
-  font-size: 17px;
-}
+  font-size: @font-size;
 
-// style UI elements inside atom-text-editor
-atom-text-editor .cursor {
-  // border-color: red;
+  .cursor {
+    border-color: red;
+  }
 }
