@@ -40,3 +40,8 @@
   'ctrl-cmd-i': 'haskell-ghc-mod:show-info'
   'ctrl-cmd-t': 'haskell-ghc-mod:show-type'
   'ctrl-cmd-g': 'haskell-ghc-mod:go-to-declaration'
+
+# psc ide
+'atom-text-editor[data-grammar~="purescript"]':
+  'ctrl-cmd-g': 'ide-purescript:goto-definition'
+  'ctrl-cmd-t': 'ide-purescript:show-tooltip'
