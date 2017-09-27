@@ -4,27 +4,33 @@
       "ide-haskell-repl"
       "exception-reporting"
       "metrics"
-      "linter-hlint"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
   editor:
-    fontSize: 6
+    fontSize: 12
     showInvisibles: true
   "exception-reporting":
     userId: ""
   "git-diff": {}
   "haskell-ghc-mod":
     onMouseHoverShow: ""
+  "highlight-selected":
+    highlightBackground: true
+    lightTheme: true
   "ide-purescript":
     addNpmPath: true
     autocomplete: {}
     pscIdeServerExe: "/home/jk/.psvm/current/bin/psc-ide-server"
     pursExe: "/home/jk/.psvm/current/bin/purs"
     useCombinedExe: false
-  "linter-hlint": {}
+  "linter-hlint":
+    hlintExecutablePath: "/home/jk/.local/bin/hlint"
   "linter-ui-default":
-    panelHeight: 69
-    showPanel: true
+    panelHeight: 231
   minimap:
     plugins:
       cursorline: true
