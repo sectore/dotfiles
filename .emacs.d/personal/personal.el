@@ -21,7 +21,7 @@
 (add-hook 'haskell-mode-hook 'intero-mode)
 
 ;; PureScript
-(package-install 'psc-ide)
+(require 'psc-ide)
 
 (add-hook 'purescript-mode-hook
   (lambda ()
