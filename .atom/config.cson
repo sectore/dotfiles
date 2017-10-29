@@ -1,4 +1,6 @@
 "*":
+  "agda-mode":
+    internalState: "{\"connections\":[],\"erred\":[]}"
   core:
     disabledPackages: [
       "ide-haskell-repl"
@@ -11,7 +13,7 @@
       "one-light-syntax"
     ]
   editor:
-    fontSize: 12
+    fontSize: 8
     showInvisibles: true
   "exception-reporting":
     userId: ""
@@ -30,7 +32,8 @@
   "linter-hlint":
     hlintExecutablePath: "/home/jk/.local/bin/hlint"
   "linter-ui-default":
-    panelHeight: 231
+    panelHeight: 252
+    showPanel: true
   minimap:
     plugins:
       cursorline: true
@@ -45,6 +48,7 @@
     createOnChange: true
     forceOverwrite: true
   "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     startInInsertMode: true
   welcome:
     showOnStartup: false
