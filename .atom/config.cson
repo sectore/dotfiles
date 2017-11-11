@@ -13,7 +13,7 @@
       "one-light-syntax"
     ]
   editor:
-    fontSize: 8
+    fontSize: 2
     showInvisibles: true
   "exception-reporting":
     userId: ""
@@ -32,7 +32,7 @@
   "linter-hlint":
     hlintExecutablePath: "/home/jk/.local/bin/hlint"
   "linter-ui-default":
-    panelHeight: 252
+    panelHeight: 231
     showPanel: true
   minimap:
     plugins:
