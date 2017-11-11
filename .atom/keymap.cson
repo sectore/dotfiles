@@ -34,6 +34,8 @@
 # tree view
 '.platform-linux':
   'ctrl-alt-r': 'tree-view:reveal-active-file'
+  'ctrl-alt-c': 'core:copy'
+  'ctrl-alt-v': 'core:paste'
 
 # haskell ide
 'atom-text-editor[data-grammar~="haskell"]':
