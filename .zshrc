@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # psvm
-PATH="$HOME/.psvm/current/bin:$PATH"
+export PATH="$HOME/.psvm/current/bin:$PATH"
 
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
@@ -103,3 +103,7 @@ export MANPATH="${HOME}/usr/share/man:${MANPATH}"
 
 export PATH="${HOME}/usr/bin:${PATH}"
 export LD_LIBRARY_PATH="${HOME}/usr/lib:${LD_LIBRARY_PATH}"
+
+# cabal + ghc
+export PATH="/opt/cabal/bin:$PATH"
+export PATH="/opt/ghc/bin:$PATH"
