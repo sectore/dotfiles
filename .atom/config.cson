@@ -13,7 +13,7 @@
       "one-light-syntax"
     ]
   editor:
-    fontSize: 2
+    fontSize: 1
     showInvisibles: true
   "exception-reporting":
     userId: ""
@@ -48,7 +48,6 @@
     createOnChange: true
     forceOverwrite: true
   "vim-mode-plus":
-    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
     startInInsertMode: true
   welcome:
     showOnStartup: false
