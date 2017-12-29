@@ -107,3 +107,8 @@ export LD_LIBRARY_PATH="${HOME}/usr/lib:${LD_LIBRARY_PATH}"
 # cabal + ghc
 export PATH="/opt/cabal/bin:$PATH"
 export PATH="/opt/ghc/bin:$PATH"
+
+# ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
