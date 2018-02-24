@@ -36,3 +36,7 @@
 (require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
 (require 'prelude-yaml)
+;;; moooore packages
+(prelude-require-packages '(nix-mode))
+(prelude-require-packages '(flycheck-haskell))
+(prelude-require-packages '(monokai-theme))

@@ -17,8 +17,13 @@
 (global-hl-line-mode 0)
 
 ;; Install Intero
-(package-install 'intero)
-(add-hook 'haskell-mode-hook 'intero-mode)
+; (package-install 'intero)
+; (add-hook 'haskell-mode-hook 'intero-mode)
+
+;; flycheck-haskell
+(package-install 'flycheck-haskell)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 
 ;; PureScript
 (require 'psc-ide)
@@ -29,6 +34,3 @@
     (company-mode)
     (flycheck-mode)
     (turn-on-purescript-indentation)))
-
-;; nix
-(package-install 'nix-mode)
