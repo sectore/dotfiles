@@ -51,7 +51,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(atom bower git npm emacs httpie tmux)
+plugins=(atom bower git npm emacs httpie tmux docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 # psvm
 export PATH="$HOME/.psvm/current/bin:$PATH"
 
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # nix
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
 
@@ -107,8 +110,47 @@ export LD_LIBRARY_PATH="${HOME}/usr/lib:${LD_LIBRARY_PATH}"
 # cabal + ghc
 export PATH="/opt/cabal/bin:$PATH"
 export PATH="/opt/ghc/bin:$PATH"
+# ghcjs 7.10
+# export PATH="${HOME}/.stack/programs/x86_64-linux/ghcjs-0.2.0.9006030_ghc-7.10.3/bin:$PATH"
 
 # ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# check .nvmrc
+# https://github.com/creationix/nvm#zsh
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+# flyway 
+export PATH="$HOME/Apps/flyway-5.0.7:$PATH"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
