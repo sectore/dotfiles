@@ -13,10 +13,14 @@ templates:
     # copyright:
     github-username: sectore
 
+compiler-check: match-exact
+
 nix:
-  enable: true
-  # enable: false
+  # enable: true
+  enable: false
+  # pure: false
   # packages:
   #   - git
   #   - ncurses
   #   - zlib
+  #   - postgresql
