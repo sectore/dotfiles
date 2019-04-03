@@ -51,7 +51,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(atom bower git npm emacs httpie tmux docker-compose)
+plugins=(bower git npm emacs httpie tmux docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,5 +152,6 @@ export PATH="$HOME/Apps/flyway-5.0.7:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # go
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
