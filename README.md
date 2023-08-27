@@ -1,6 +1,6 @@
 # dotfiles
 
-Few notes (personal reminder only):
+## Notes _(personal reminder only)_
 
 ### `Nix` + `Home Manager`
 
@@ -39,7 +39,12 @@ home-manager --version
 23.11-pre
 ```
 
-#### Configartion of Home Manager and programs
+#### Configuration of Home Manager and programs
+
+- Packages https://search.nixos.org/packages?channel=unstable
+- Configuration Options 
+   - https://nix-community.github.io/home-manager/options.html
+   - https://mipmip.github.io/home-manager-option-search/
 
 :eyes: [home-manager/README](./home-manager/README.md).
 
