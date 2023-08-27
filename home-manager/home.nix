@@ -27,8 +27,11 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    nix-info
     cachix
+    du-dust
+    httpie
+    jq
+    nix-info
     neofetch
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
