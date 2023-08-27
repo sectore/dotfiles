@@ -64,7 +64,9 @@ sudo vi /etc/shells
 # change shell to `zsh`
 chsh -s ~/.nix-profile/bin/zsh
 ```
-:eyes: How to make ZSH the default shell? https://askubuntu.com/a/1054798
+Reference: 
+   - How to make ZSH the default shell? https://askubuntu.com/a/1054798
+   - Change my default shell in Linux using chsh https://www.cyberciti.biz/faq/change-my-default-shell-in-linux-using-chsh/
 
 
 #### Acknowledge
