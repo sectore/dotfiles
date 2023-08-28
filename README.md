@@ -1,8 +1,6 @@
 # dotfiles
 
-personal dotfiles
-
-## Notes (personal reminder)
+## Notes _(personal reminder only)_
 
 ### `Nix` + `Home Manager`
 
@@ -15,7 +13,7 @@ personal dotfiles
 
 :eyes: https://nixos.wiki/wiki/Flakes#Permanent
 
-:eyes: [nix/README](./nix/README.md)
+:eyes: [nix/README](./nix/README)
 
 
 #### Install standalone `Home Manager`
@@ -41,9 +39,34 @@ home-manager --version
 23.11-pre
 ```
 
-#### Configartion of Home Manager and programs
+#### Configuration of Home Manager and programs
+
+- Packages https://search.nixos.org/packages?channel=unstable
+- Configuration Options 
+   - https://nix-community.github.io/home-manager/options.html
+   - https://mipmip.github.io/home-manager-option-search/
 
 :eyes: [home-manager/README](./home-manager/README.md).
+
+
+#### Change default shell to `zsh`
+
+Home Manager can't change the default shell, so we need to do it manually:
+
+``` shell
+# `which zsh`
+which zsh
+~/.nix-profile/bin/zsh
+
+# add it to `/etc/shells`
+sudo vi /etc/shells
+ 
+# change shell to `zsh`
+chsh -s ~/.nix-profile/bin/zsh
+```
+Reference: 
+   - How to make ZSH the default shell? https://askubuntu.com/a/1054798
+   - Change my default shell in Linux using chsh https://www.cyberciti.biz/faq/change-my-default-shell-in-linux-using-chsh/
 
 
 #### Acknowledge
