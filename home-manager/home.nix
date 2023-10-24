@@ -29,10 +29,12 @@
   home.packages = with pkgs; [
     cachix
     du-dust
+    glibc
     httpie
     jq
-    nix-info
     neofetch
+    nix-info
+    openssh
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
