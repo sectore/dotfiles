@@ -18,7 +18,7 @@
 
 #### Install standalone `Home Manager`
 
-:eyes: https://nix-community.github.io/home-manager/index.html#sec-install-standalone
+:eyes: https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone
 
 ``` shell
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
