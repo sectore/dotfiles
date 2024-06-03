@@ -1,6 +1,6 @@
 # dotfiles
 
-## Notes _(personal reminder only)_
+## Personal notes _(as a reminder only)_
 
 ### `Nix` + `Home Manager`
 
@@ -36,7 +36,26 @@ home-manager-path
 # or 
 
 home-manager --version
-23.11-pre
+24.11-pre
+```
+
+#### Checkout and link dotfiles 
+
+```shell
+git pull git@github.com:sectore/dotfiles.git
+cd dotfiles
+```
+
+Link `home-manager` and `nix` folder to `~/.config` using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction)
+
+``` shell
+stow . -t ~/.config
+```
+
+Activate configuration of `home-manager` after setup or any future changes: 
+
+``` shell
+home-manager switch
 ```
 
 #### Configuration of Home Manager and programs
