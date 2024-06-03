@@ -39,14 +39,14 @@ home-manager --version
 24.11-pre
 ```
 
-#### Checkout and link dotfiles 
+#### Checkout and symlink dotfiles 
 
 ```shell
 git pull git@github.com:sectore/dotfiles.git
 cd dotfiles
 ```
 
-Link `home-manager` and `nix` folder to `~/.config` using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction)
+Symlink `home-manager` and `nix` folder to `~/.config` using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) based on YT vid [Stow has forever changed the way I manage my dotfiles](https://www.youtube.com/watch?v=y6XCebnB9gs)
 
 ``` shell
 stow . -t ~/.config
