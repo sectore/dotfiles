@@ -36,6 +36,7 @@
     neofetch
     nix-info
     openssh
+    stow # symlink farm manager - https://www.gnu.org/software/stow/
 
     # node and stuff
     fnm # Fast Node Manager https://github.com/Schniz/fnm
