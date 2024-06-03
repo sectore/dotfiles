@@ -1,8 +1,8 @@
-{ ... }:
+{ config, ... }:
 {
   programs.git = {
     enable = true;
-    userName = "Jens K.";
+    userName = "jk";
     userEmail = "email@jkrause.io";
     extraConfig = {
       url = {
@@ -19,6 +19,8 @@
       core = {
         editor = "vim";
       };
+      gpg.format = "ssh";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
       # Conditional includes
       # https://git-scm.com/docs/git-config#_conditional_includes
       # includeIf = {
