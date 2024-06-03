@@ -38,9 +38,11 @@
     openssh
 
     # node and stuff
+    fnm # Fast Node Manager https://github.com/Schniz/fnm
     bun
     nodejs_20
     nodejs_20.pkgs.pnpm
+    yarn
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
