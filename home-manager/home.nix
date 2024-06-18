@@ -44,6 +44,7 @@
     nodejs_20
     nodejs_20.pkgs.pnpm
     yarn
+    deno
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
