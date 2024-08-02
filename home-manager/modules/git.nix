@@ -3,8 +3,9 @@
   programs.git = {
     enable = true;
     userName = "jk";
-    userEmail = "email@jkrause.io";
+    userEmail = "47693+sectore@users.noreply.github.com";
     extraConfig = {
+      init.defaultBranch = "main";
       url = {
         "ssh://git@github.com/" = { 
           insteadOf = [ "https://github.com/" ]; 

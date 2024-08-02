@@ -4,7 +4,7 @@
     enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
-    enableAutosuggestions = false;
+    autosuggestion.enable = false;
     initExtra = ''
       # pnpm
       export PNPM_HOME="$HOME/.nix-profile/bin/pnpm"

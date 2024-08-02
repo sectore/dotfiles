@@ -6,6 +6,7 @@
     ./modules/git.nix
     ./modules/zsh.nix
     ./modules/starship.nix
+    ./modules/unfree.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -37,6 +38,8 @@
     nix-info
     openssh
     stow # symlink farm manager - https://www.gnu.org/software/stow/
+    ffmpeg_7-full
+    telegram-desktop
 
     # node and stuff
     fnm # Fast Node Manager https://github.com/Schniz/fnm
@@ -45,6 +48,14 @@
     nodejs_20.pkgs.pnpm
     yarn
     deno
+
+    # elm
+    elmPackages.elm
+    elmPackages.elm-format
+    elmPackages.elm-test
+    elmPackages.elm-review
+    elmPackages.elm-live
+    elmPackages.elm-land
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
