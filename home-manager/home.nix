@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
     ./modules/git.nix
     ./modules/zsh.nix
     ./modules/starship.nix
+    ./modules/rust.nix
     ./modules/unfree.nix
   ];
 

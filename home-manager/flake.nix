@@ -8,12 +8,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     nixpkgs, 
     home-manager, 
-    ... }: let
+    ... }@inputs: let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
@@ -26,6 +30,10 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+        extraSpecialArgs = {
+          # make inputs available to home.nix
+          inherit inputs;
+        };
       };
     };
 }
