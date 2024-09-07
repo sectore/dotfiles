@@ -35,6 +35,7 @@
     du-dust
     glibc
     httpie
+    htop
     jq
     neofetch
     nix-info
