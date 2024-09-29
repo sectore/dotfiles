@@ -10,29 +10,29 @@ let
       sha256 = "sha256-J02Pt+kKu8BsngHoYHpkf2RY4EHTJdO9F7uA0zvFwU0=";
     };
     cargoHash = "sha256-UagkiQ9/3xzUNXR10YY/KIlrata83FiJhIxt6WDJnQQ=";
-    # Ignore tests to avoid error `test cli_tests ... FAILED`
+    # Ignore tests
+    # `test cli_tests ... FAILED`
     doCheck = false;
   };
+
+  rust-bin = inputs.rust-overlay.packages.${pkgs.system}.rust-bin;
 in
 
 {
-  nixpkgs.overlays = [
-    inputs.rust-overlay.overlays.default
-  ];
-
   home = {
-    packages = with pkgs; [
+    packages = [
       (rust-bin.stable.latest.default.override {
         extensions = [
-          "rust-src" 
-          "rust-analyzer" 
+          "rust-src"
+          "rust-analyzer"
           "rustfmt"
           "clippy"
         ];
         targets = ["x86_64-unknown-linux-gnu" "wasm32-unknown-unknown"];
       })
         loco-cli
-        sea-orm-cli
+        pkgs.sea-orm-cli
+        pkgs.cargo-leptos
       ];
       sessionPath = [ "$HOME/.cargo/bin" ];
     };
