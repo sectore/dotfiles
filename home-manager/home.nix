@@ -40,8 +40,10 @@
     neofetch
     nix-info
     openssh
+    pdftk
     stow # symlink farm manager - https://www.gnu.org/software/stow/
     ffmpeg_7-full
+    vlc
     telegram-desktop
 
     # node and stuff
@@ -59,6 +61,9 @@
     elmPackages.elm-review
     elmPackages.elm-live
     elmPackages.elm-land
+
+    # misc
+    simple-http-server
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
