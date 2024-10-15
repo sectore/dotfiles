@@ -15,13 +15,44 @@ let
     doCheck = false;
   };
 
-  rust-bin = inputs.rust-overlay.packages.${pkgs.system}.rust-bin;
+  # Next dioxus-cli to fix hot-reload (desktop)
+    dioxus-cli = pkgs.rustPlatform.buildRustPackage rec {
+      pname = "dioxus-cli";
+      name = "${pname}-git-${src.rev}";
+      src = pkgs.fetchFromGitHub {
+        owner = "DioxusLabs";
+        repo = "dioxus";
+        rev = "jk/proper-asset-crossplatform";
+        sha256 = "sha256-WyMyb5m0uWkxf6MgHBr8mFDq3X5jwBh82F3ATgikI2c=";
+      };
+      cargoLock = {
+        lockFile = "${src}/Cargo.lock";
+      };
+
+      buildAndTestSubdir = "packages/cli";
+
+      buildInputs = with pkgs; [
+        openssl
+        pkg-config
+      ];
+
+      nativeBuildInputs = with pkgs; [
+        pkg-config
+      ];
+      # don't run tests
+      doCheck = false;
+    };
+
+    rustPkgs = import pkgs.path {
+        inherit (pkgs) system;
+        overlays = [ (import inputs.rust-overlay) ];
+    };
 in
 
 {
   home = {
     packages = [
-      (rust-bin.stable.latest.default.override {
+      (rustPkgs.rust-bin.stable.latest.default.override {
         extensions = [
           "rust-src"
           "rust-analyzer"
@@ -33,6 +64,8 @@ in
         loco-cli
         pkgs.sea-orm-cli
         pkgs.cargo-leptos
+        pkgs.leptosfmt
+        dioxus-cli
       ];
       sessionPath = [ "$HOME/.cargo/bin" ];
     };
