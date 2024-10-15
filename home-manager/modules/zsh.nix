@@ -6,6 +6,9 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = false;
     initExtra = ''
+      # zed
+      export PATH=$HOME/.local/bin:$PATH
+
       # pnpm
       export PNPM_HOME="$HOME/.nix-profile/bin/pnpm"
       case ":$PATH:" in
@@ -18,10 +21,10 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ 
-        "git" 
+      plugins = [
+        "git"
         "npm"
-        "httpie" 
+        "httpie"
       ];
       theme = "jreese";
     };
