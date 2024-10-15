@@ -15,6 +15,7 @@
           "$git_metrics"
           "$cmd_duration $jobs"
           "$fill"
+          "$haskell"
           "$nodejs"
           "$nix_shell"
           "$rust"
@@ -62,6 +63,11 @@
         style = "cyan";
       };
 
+      haskell = {
+        format = "[$symbol($version )]($style)";
+        style = "purple";
+      };
+
       nodejs = {
         format = "[$symbol($version )]($style)";
         style = "bold blue";
@@ -76,7 +82,7 @@
       };
 
       nix_shell = {
-        format = "[$symbol$state( \($name\))]($style) ";
+        format = "[$symbol$state( \($name\))]($style)";
       };
 
       jobs = {
