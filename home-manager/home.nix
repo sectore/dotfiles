@@ -31,20 +31,25 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    cachix
+
     du-dust
     glibc
     httpie
     htop
     jq
     neofetch
-    nix-info
     openssh
     pdftk
     stow # symlink farm manager - https://www.gnu.org/software/stow/
     ffmpeg_7-full
     vlc
     telegram-desktop
+
+    # nix
+    nixd
+    nix-info
+    alejandra
+    cachix
 
     # node and stuff
     fnm # Fast Node Manager https://github.com/Schniz/fnm
