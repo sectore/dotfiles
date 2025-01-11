@@ -46,6 +46,7 @@
     telegram-desktop
 
     # nix
+    nil
     nixd
     nix-info
     alejandra
@@ -69,6 +70,7 @@
 
     # misc
     simple-http-server
+    vhs
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
