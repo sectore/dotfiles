@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   programs.git = {
     enable = true;
@@ -7,8 +7,8 @@
     extraConfig = {
       init.defaultBranch = "main";
       url = {
-        "ssh://git@github.com/" = { 
-          insteadOf = [ "https://github.com/" ]; 
+        "ssh://git@github.com/" = {
+          insteadOf = [ "https://github.com/" ];
         };
       };
       pull = {
