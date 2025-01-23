@@ -1,13 +1,13 @@
-{ inputs, pkgs, ... }:
-
-let
-    rustPkgs = import pkgs.path {
-        inherit (pkgs) system;
-        overlays = [ (import inputs.rust-overlay) ];
-    };
-in
-
 {
+  inputs,
+  pkgs,
+  ...
+}: let
+  rustPkgs = import pkgs.path {
+    inherit (pkgs) system;
+    overlays = [(import inputs.rust-overlay)];
+  };
+in {
   home = {
     packages = [
       (rustPkgs.rust-bin.stable.latest.default.override {
@@ -19,8 +19,8 @@ in
         ];
         targets = ["x86_64-unknown-linux-gnu" "wasm32-unknown-unknown"];
       })
-        pkgs.cargo-generate
-      ];
-      sessionPath = [ "$HOME/.cargo/bin" ];
-    };
+      pkgs.cargo-generate
+    ];
+    sessionPath = ["$HOME/.cargo/bin"];
+  };
 }

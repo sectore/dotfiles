@@ -1,26 +1,24 @@
-{ lib, ... }:
-{
+{lib, ...}: {
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
     settings = {
-
       format = lib.concatStrings [
-          "$hostname"
-          "$username"
-          "$directory"
-          "$git_branch"
-          "$git_state"
-          "$git_status"
-          "$git_metrics"
-          "$cmd_duration $jobs"
-          "$fill"
-          "$haskell"
-          "$nodejs"
-          "$nix_shell"
-          "$rust"
-          "$line_break"
-          "$character"
+        "$hostname"
+        "$username"
+        "$directory"
+        "$git_branch"
+        "$git_state"
+        "$git_status"
+        "$git_metrics"
+        "$cmd_duration $jobs"
+        "$fill"
+        "$haskell"
+        "$nodejs"
+        "$nix_shell"
+        "$rust"
+        "$line_break"
+        "$character"
       ];
 
       fill = {
@@ -103,7 +101,6 @@
       package = {
         disabled = true;
       };
-
     };
   };
 }

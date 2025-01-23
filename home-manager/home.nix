@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
     ./modules/direnv.nix
     ./modules/git.nix
@@ -15,9 +13,9 @@
   # (1) To import `nixgl`, it needs to be installed via `nix-channels` before.
   # Check https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
   # (2) Configuration, see https://github.com/nix-community/home-manager/blob/master/docs/manual/usage/gpu-non-nixos.md
-  nixGL.packages = import <nixgl> { inherit pkgs; };
+  nixGL.packages = import <nixgl> {inherit pkgs;};
   nixGL.defaultWrapper = "mesa";
-  nixGL.installScripts = [ "mesa" ];
+  nixGL.installScripts = ["mesa"];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -39,7 +37,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-
     du-dust
     glibc
     httpie

@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.ghostty.enable
   programs.ghostty = {
     enable = true;

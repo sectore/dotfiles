@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.git = {
     enable = true;
     userName = "jk";
@@ -8,7 +7,7 @@
       init.defaultBranch = "main";
       url = {
         "ssh://git@github.com/" = {
-          insteadOf = [ "https://github.com/" ];
+          insteadOf = ["https://github.com/"];
         };
       };
       pull = {

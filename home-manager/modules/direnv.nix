@@ -1,4 +1,4 @@
-{  
+{
   # https://zero-to-flakes.com/direnv
   programs.direnv = {
     enable = true;
