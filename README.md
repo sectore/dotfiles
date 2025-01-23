@@ -96,7 +96,7 @@ From [Bevy's docs](https://github.com/bevyengine/bevy/blob/main/docs/linux_depen
 
 #### Installation
 
-Recommended via `nix-channel` ([source](https://github.com/nix-community/nixGL?tab=readme-ov-file#nix-channel-recommended)
+[nixGL docs](https://github.com/nix-community/nixGL?tab=readme-ov-file#nix-channel-recommended) recommends to install `nixGL` via `nix-channel`
 
 ```sh
 # add channel
