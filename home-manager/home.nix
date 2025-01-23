@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -8,8 +8,15 @@
     ./modules/starship.nix
     ./modules/rust.nix
     ./modules/unfree.nix
-    ./modules/xdg-mime-enable.nix
   ];
+
+  # Notes about `NixGL`:
+  # (1) To import `nixgl`, it needs to be installed via `nix-channels` before.
+  # Check https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
+  # (2) Configuration, see https://github.com/nix-community/home-manager/blob/master/docs/manual/usage/gpu-non-nixos.md
+  nixGL.packages = import <nixgl> { inherit pkgs; };
+  nixGL.defaultWrapper = "mesa";
+  nixGL.installScripts = [ "mesa" ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -25,7 +32,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.stateVersion = "24.11"; # Please read the comment before changing.
   home.enableNixpkgsReleaseCheck = false;
 
   # The home.packages option allows you to install Nix packages into your
@@ -38,12 +45,13 @@
     htop
     jq
     neofetch
+    onefetch
     openssh
     pdftk
     stow # symlink farm manager - https://www.gnu.org/software/stow/
     ffmpeg_7-full
     vlc
-    telegram-desktop
+    # telegram-desktop
 
     # nix
     nil
@@ -72,6 +80,8 @@
     simple-http-server
     vhs
 
+    # TODO: settings
+    (config.lib.nixGL.wrap ghostty)
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

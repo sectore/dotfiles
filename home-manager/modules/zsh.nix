@@ -5,6 +5,11 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable = false;
+    shellAliases = {
+      # `nixGLNvidia-550.120` needs to be installed via `nix-channel` before
+      #  see https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
+     nixGLNvidia = "nixGLNvidia-550.120";
+    };
     initExtra = ''
       # zed
       export PATH=$HOME/.local/bin:$PATH
