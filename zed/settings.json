@@ -1,0 +1,60 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
+  "vim_mode": false,
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Dark",
+    "dark": "One Dark"
+  },
+  "lsp": {
+    // Specify the LSP name as a key here.
+    "rust-analyzer": {
+      // These initialization options are merged into Zed's defaults
+      "initialization_options": {
+        "check": {
+          "command": "clippy" // rust-analyzer.check.command (default: "check")
+        }
+      }
+    }
+  },
+  // Add extensions here (don't install it via Zed's UI).
+  // 
+  // Correct name of extensions matters! 
+  // Always use the `id` of the extension defined in its `extension.toml`
+  // Extensions will be installed into /.local/share/zed/extensions/installed
+  // https://zed.dev/docs/configuring-zed#auto-install-extensions
+  "auto_install_extensions": {
+    "astro": true,
+    "elm": true,
+    "git-firefly": true,
+    "haskell": true,
+    "just": true,
+    "html": true,
+    "nix": true,
+    "svelte": true,
+    "toml": true
+  }
+}

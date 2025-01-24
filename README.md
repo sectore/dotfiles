@@ -34,7 +34,7 @@ home-manager-path
 # or
 
 home-manager --version
-24.11-pre
+25.05-pre
 ```
 
 ### Checkout and symlink dotfiles
@@ -44,11 +44,22 @@ git pull git@github.com:sectore/dotfiles.git
 cd dotfiles
 ```
 
-Symlink `home-manager` and `nix` folder to `~/.config` using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) based on YT vid [Stow has forever changed the way I manage my dotfiles](https://www.youtube.com/watch?v=y6XCebnB9gs)
+Symlink `home-manager`, `nix` and `zed` folder to `~/.config` using [stow](https://www.gnu.org/software/stow/manual/stow.html#Introduction) based on YT vid [Stow has forever changed the way I manage my dotfiles](https://www.youtube.com/watch?v=y6XCebnB9gs)
 
 ```sh
 stow . -t ~/.config
 ```
+
+Side note: `home-manager` provides [`programs.zed-editor`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zed-editor.enable), 
+but it errors while creating symlinks to `settings.json` etc., which Zed tries to override. That ends in errors such as 
+```sh
+Permission denied (os error 13) at path "/nix/store/..."
+# or
+Failed to write settings to file "/nix/store/xxr...-zed-user-settings"
+```
+Very similar to https://github.com/zed-industries/zed/issues/16618 
+
+Solution is just to add `pkgs.zed-editor` to `home.packages` and symlink Zed's settings files etc. located in `~/dotfiles/zed/` by using `stow`.
 
 Activate configuration of `home-manager` after setup or any future changes:
 

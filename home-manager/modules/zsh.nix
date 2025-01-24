@@ -10,9 +10,6 @@
       nixGLNvidia = "nixGLNvidia-550.120";
     };
     initExtra = ''
-      # zed
-      export PATH=$HOME/.local/bin:$PATH
-
       # pnpm
       export PNPM_HOME="$HOME/.nix-profile/bin/pnpm"
       case ":$PATH:" in

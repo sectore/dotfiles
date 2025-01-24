@@ -1,12 +1,16 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./modules/direnv.nix
     ./modules/git.nix
-    ./modules/zsh.nix
-    ./modules/starship.nix
     ./modules/rust.nix
+    ./modules/starship.nix
     ./modules/terminal.nix
     ./modules/unfree.nix
+    ./modules/zsh.nix
   ];
 
   # Notes about `NixGL`:
@@ -15,7 +19,8 @@
   # (2) Configuration, see https://github.com/nix-community/home-manager/blob/master/docs/manual/usage/gpu-non-nixos.md
   nixGL.packages = import <nixgl> {inherit pkgs;};
   nixGL.defaultWrapper = "mesa";
-  nixGL.installScripts = ["mesa"];
+  nixGL.offloadWrapper = "nvidia";
+  nixGL.installScripts = ["mesa" "nvidia"];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -77,6 +82,10 @@
     # misc
     simple-http-server
     vhs
+
+    # Note: To avoid symlink related issues use `pkgs.zed-editor` instead of `programs.zed-editor` 
+    # see https://github.com/sectore/dotfiles?tab=readme-ov-file#checkout-and-symlink-dotfiles for more details.
+    (config.lib.nixGL.wrappers.nvidia zed-editor)
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
