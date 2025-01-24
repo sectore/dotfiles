@@ -55,6 +55,7 @@
     ffmpeg_7-full
     vlc
     # telegram-desktop
+    discord
 
     # nix
     nil
@@ -83,7 +84,7 @@
     simple-http-server
     vhs
 
-    # Note: To avoid symlink related issues use `pkgs.zed-editor` instead of `programs.zed-editor` 
+    # Note: To avoid symlink related issues use `pkgs.zed-editor` instead of `programs.zed-editor`
     # see https://github.com/sectore/dotfiles?tab=readme-ov-file#checkout-and-symlink-dotfiles for more details.
     (config.lib.nixGL.wrappers.nvidia zed-editor)
 
