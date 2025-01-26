@@ -29,6 +29,14 @@
     "light": "One Dark",
     "dark": "One Dark"
   },
+  "languages": {
+    "Nix": {
+      "language_servers": ["nixd", "nil"]
+    },
+    "TOML": {
+      "language_servers": ["taplo"]
+    }
+  },
   "lsp": {
     // Specify the LSP name as a key here.
     "rust-analyzer": {
@@ -38,11 +46,33 @@
           "command": "clippy" // rust-analyzer.check.command (default: "check")
         }
       }
+    },
+    "nixd": {
+      "binary": {
+        "path": "nixd"
+      },
+
+      "settings": {
+        "formatting": {
+          "command": ["alejandra"]
+        }
+      }
+    },
+    "nil": {
+      "binary": {
+        "path": "nil"
+      }
+    },
+    "taplo": {
+      "binary": {
+        "path": "taplo",
+        "arguments": ["lsp", "stdio"]
+      }
     }
   },
   // Add extensions here (don't install it via Zed's UI).
-  // 
-  // Correct name of extensions matters! 
+  //
+  // Correct name of extensions matters!
   // Always use the `id` of the extension defined in its `extension.toml`
   // Extensions will be installed into /.local/share/zed/extensions/installed
   // https://zed.dev/docs/configuring-zed#auto-install-extensions
