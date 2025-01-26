@@ -81,6 +81,7 @@
     elmPackages.elm-land
 
     # misc
+    taplo # TOML tooklit https://taplo.tamasfe.dev/
     simple-http-server
     vhs
 
