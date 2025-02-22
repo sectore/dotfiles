@@ -72,6 +72,8 @@
     nodejs_20.pkgs.pnpm
     yarn
     deno
+    # https://mise.jdx.dev/
+    mise
 
     # elm
     elmPackages.elm

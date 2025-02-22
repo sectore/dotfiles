@@ -12,7 +12,7 @@
       discord = "discord --no-sandbox";
     };
     initExtra = ''
-      # pnpm
+      # pnpm https://pnpm.io/
       export PNPM_HOME="$HOME/.nix-profile/bin/pnpm"
       case ":$PATH:" in
         *":$PNPM_HOME:"*) ;;
@@ -20,14 +20,18 @@
       esac
       # pnpm end
 
+      # https://mise.jdx.dev/installing-mise.html#zsh
+      eval "$(mise activate zsh)"
     '';
 
     oh-my-zsh = {
       enable = true;
       plugins = [
         "git"
-        "npm"
         "httpie"
+        # https://mise.jdx.dev/installing-mise.html#autocompletion
+        "mise"
+        "npm"
       ];
       theme = "jreese";
     };
