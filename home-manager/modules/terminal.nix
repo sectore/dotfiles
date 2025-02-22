@@ -13,7 +13,7 @@
       # https://ghostty.org/docs/config/reference#theme
       theme = "OneHalfLight";
       # https://ghostty.org/docs/config/reference#cursor-style
-      cursor-style = "bar";
+      cursor-style = "block";
     };
   };
 }
