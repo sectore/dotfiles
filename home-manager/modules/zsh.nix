@@ -11,7 +11,7 @@
       # Discord's sandbox requires specific permissions
       discord = "discord --no-sandbox";
     };
-    initExtra = ''
+    initContent = ''
       # pnpm https://pnpm.io/
       export PNPM_HOME="$HOME/.nix-profile/bin/pnpm"
       case ":$PATH:" in
