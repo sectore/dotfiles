@@ -10,7 +10,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -74,7 +74,7 @@
   //
   // Correct name of extensions matters!
   // Always use the `id` of the extension defined in its `extension.toml`
-  // Extensions will be installed into /.local/share/zed/extensions/installed
+  // Extensions will be installed into `~/.local/share/zed/extensions/installed`
   // https://zed.dev/docs/configuring-zed#auto-install-extensions
   "auto_install_extensions": {
     "astro": true,
@@ -85,6 +85,7 @@
     "html": true,
     "nix": true,
     "svelte": true,
+    "sql": true,
     "toml": true
   }
 }
