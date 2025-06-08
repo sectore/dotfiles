@@ -13,6 +13,7 @@
         "$git_metrics"
         "$cmd_duration $jobs"
         "$fill"
+        "$golang"
         "$haskell"
         "$nodejs"
         "$nix_shell"
@@ -59,6 +60,11 @@
 
       git_status = {
         style = "cyan";
+      };
+
+      golang = {
+        format = "[$symbol($version )]($style)";
+        style = "bold cyan";
       };
 
       haskell = {

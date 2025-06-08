@@ -6,6 +6,7 @@
   imports = [
     ./modules/direnv.nix
     ./modules/git.nix
+    ./modules/go.nix
     ./modules/keychain.nix
     ./modules/rust.nix
     ./modules/starship.nix
