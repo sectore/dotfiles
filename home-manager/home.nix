@@ -66,14 +66,14 @@
     cachix
 
     # node and stuff
-    fnm # Fast Node Manager https://github.com/Schniz/fnm
+    # fnm # Fast Node Manager https://github.com/Schniz/fnm
     bun
     nodejs_22
     nodejs_22.pkgs.pnpm
     yarn
     deno
     # https://mise.jdx.dev/
-    mise
+    # mise
 
     # elm
     elmPackages.elm

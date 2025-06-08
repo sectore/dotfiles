@@ -21,7 +21,7 @@
       # pnpm end
 
       # https://mise.jdx.dev/installing-mise.html#zsh
-      eval "$(mise activate zsh)"
+      # eval "$(mise activate zsh)"
     '';
 
     oh-my-zsh = {
@@ -30,7 +30,7 @@
         "git"
         "httpie"
         # https://mise.jdx.dev/installing-mise.html#autocompletion
-        "mise"
+        # "mise"
         "npm"
       ];
       theme = "jreese";
