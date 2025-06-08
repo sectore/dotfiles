@@ -10,7 +10,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
@@ -82,10 +82,13 @@
     "git-firefly": true,
     "haskell": true,
     "just": true,
+    "just-ls": true,
     "html": true,
     "nix": true,
     "svelte": true,
+    "oxc": true,
     "sql": true,
-    "toml": true
+    "toml": true,
+    "vue": true
   }
 }
