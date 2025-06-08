@@ -15,7 +15,7 @@
   ];
 
   # Notes about `NixGL`:
-  # (1) To import `nixgl`, it needs to be installed via `nix-channels` before.
+  # (1) To import `nixgl`, it needs to be iqnstalled via `nix-channels` before.
   # Check https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
   # (2) Configuration, see https://github.com/nix-community/home-manager/blob/master/docs/manual/usage/gpu-non-nixos.md
   nixGL.packages = import <nixgl> {inherit pkgs;};
@@ -68,8 +68,8 @@
     # node and stuff
     fnm # Fast Node Manager https://github.com/Schniz/fnm
     bun
-    nodejs_20
-    nodejs_20.pkgs.pnpm
+    nodejs_22
+    nodejs_22.pkgs.pnpm
     yarn
     deno
     # https://mise.jdx.dev/
@@ -84,6 +84,7 @@
     elmPackages.elm-land
 
     # misc
+    just
     taplo # TOML tooklit https://taplo.tamasfe.dev/
     simple-http-server
     vhs
