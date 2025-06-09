@@ -19,6 +19,7 @@ in {
       targets = ["x86_64-unknown-linux-gnu" "wasm32-unknown-unknown" "wasm32-wasip1"];
     })
     cargo-generate
+    cargo-edit
   ];
   home.sessionPath = ["$HOME/.cargo/bin"];
 }
