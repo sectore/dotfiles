@@ -71,8 +71,9 @@
     bun
     nodejs_22
     nodejs_22.pkgs.pnpm
+    typescript
     yarn
-    deno
+    # deno
     # https://mise.jdx.dev/
     # mise
 
