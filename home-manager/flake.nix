@@ -5,7 +5,9 @@
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      # TODO: Go back to latest master when #7307 is fixed
+      # https://github.com/nix-community/home-manager/issues/7307
+      url = "github:nix-community/home-manager/fefeb0e928d1ec528f54e73892a7c069425d5041";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay = {
