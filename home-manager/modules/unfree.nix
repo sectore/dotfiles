@@ -3,5 +3,6 @@
     builtins.elem (lib.getName pkg) [
       "discord"
       "nvidia"
+      "claude-code"
     ];
 }

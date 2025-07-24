@@ -95,6 +95,8 @@
     # see https://github.com/sectore/dotfiles?tab=readme-ov-file#checkout-and-symlink-dotfiles for more details.
     (config.lib.nixGL.wrappers.nvidia zed-editor)
 
+    claude-code
+
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
