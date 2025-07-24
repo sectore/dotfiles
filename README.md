@@ -50,14 +50,14 @@ Symlink `home-manager`, `nix` and `zed` folder to `~/.config` using [stow](https
 stow . -t ~/.config
 ```
 
-Side note: `home-manager` provides [`programs.zed-editor`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zed-editor.enable), 
-but it errors while creating symlinks to `settings.json` etc., which Zed tries to override. That ends in errors such as 
+Side note: `home-manager` provides [`programs.zed-editor`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zed-editor.enable),
+but it errors while creating symlinks to `settings.json` etc., which Zed tries to override. That ends in errors such as
 ```sh
 Permission denied (os error 13) at path "/nix/store/..."
 # or
 Failed to write settings to file "/nix/store/xxr...-zed-user-settings"
 ```
-Very similar to https://github.com/zed-industries/zed/issues/16618 
+Very similar to https://github.com/zed-industries/zed/issues/16618
 
 Solution is just to add `pkgs.zed-editor` to `home.packages` and symlink Zed's settings files etc. located in `~/dotfiles/zed/` by using `stow`.
 
@@ -120,7 +120,7 @@ which nixGL
 # install nixGLNvidia
 nix-env -if https://github.com/guibou/nixGL/archive/main.tar.gz -A auto.nixGLNvidia
 # double check
-which nixGLNvidia-550.120
+which nixGLNvidia-550.163.01
 # (after setting a symlink in `zsh.nix`)
 which nixGLNvidia
 ```

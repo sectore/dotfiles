@@ -5,9 +5,9 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = false;
     shellAliases = {
-      # `nixGLNvidia-550.144.03` needs to be installed via `nix-channel` before
+      # `nixGLNvidia-550.163.01` needs to be installed via `nix-channel` before
       #  see https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
-      nixGLNvidia = "nixGLNvidia-550.144.03";
+      nixGLNvidia = "nixGLNvidia-550.163.01";
       # Discord's sandbox requires specific permissions
       discord = "discord --no-sandbox";
     };
