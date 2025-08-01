@@ -10,6 +10,9 @@
       nixGLNvidia = "nixGLNvidia-575.64.03";
       # Discord's sandbox requires specific permissions
       discord = "discord --no-sandbox";
+      # extra git aliases (using `git` plugin of `oh-my-zsh`)
+      # gbde (git-branch-delete-extra)
+      gbde = "gb | grep -Ev 'main|master' | xargs git branch -D";
     };
     initContent = ''
       # pnpm https://pnpm.io/
