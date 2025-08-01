@@ -133,6 +133,52 @@ nix-channel --remove nixgl
 nix-channel --update
 ```
 
+### `apparmor` profiles
+
+Ubuntu 24.04 introduced security improvements, such as [Unprivileged user namespace restrictions](https://discourse.ubuntu.com/t/ubuntu-24-04-lts-noble-numbat-release-notes/39890#p-99950-unprivileged-user-namespace-restrictions) in combinination with the `apparmor` package.
+
+Programs installed by `Home Manager` might missing such profiles and throwing errors such as:
+
+```sh
+❯ discord
+[Nix] Disabling updates already done
+[67961:0801/152728.026170:FATAL:setuid_sandbox_host.cc(163)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /nix/store/{hash}-discord-0.0.{version}/opt/Discord/chrome-sandbox is owned by root and has mode 4755.
+```
+
+### Fix
+
+1. [Create an `appamor` profile](https://documentation.ubuntu.com/server/how-to/security/apparmor/index.html#create-a-profile) for such program, e.g. `discord`:
+
+```sh
+sudo vi /etc/apparmor.d/discord
+```
+
+2. Add following content:
+
+```sh
+abi <abi/4.0>,
+include <tunables/global>
+
+profile discord /nix/store/*-discord-*/**/* flags=(unconfined) {
+  userns,
+}
+```
+
+3. Load profile into the kernel:
+
+```sh
+sudo apparmor_parser -r /etc/apparmor.d/discord
+```
+More `apparmor` [commands](https://documentation.ubuntu.com/server/how-to/security/apparmor/index.html#common-commands).
+
+4. Reload all profiles
+
+```sh
+sudo apparmor_parser -r /etc/apparmor.d/profile.name
+```
+
+Done.
+
 ### Acknowledge
 
 - NixOS Wiki: [Flakes](https://nixos.wiki/wiki/Flakes)
