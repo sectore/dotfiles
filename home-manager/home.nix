@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./modules/brave.nix
     ./modules/direnv.nix
     ./modules/git.nix
     ./modules/go.nix
