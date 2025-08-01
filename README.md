@@ -174,7 +174,7 @@ More `apparmor` [commands](https://documentation.ubuntu.com/server/how-to/securi
 4. Reload all profiles
 
 ```sh
-sudo apparmor_parser -r /etc/apparmor.d/profile.name
+sudo systemctl reload apparmor.service
 ```
 
 Done.
