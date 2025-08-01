@@ -7,7 +7,7 @@
     shellAliases = {
       # `nixGLNvidia-550.163.01` needs to be installed via `nix-channel` before
       #  see https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
-      nixGLNvidia = "nixGLNvidia-550.163.01";
+      nixGLNvidia = "nixGLNvidia-575.64.03";
       # Discord's sandbox requires specific permissions
       discord = "discord --no-sandbox";
     };
