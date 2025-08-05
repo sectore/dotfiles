@@ -10,9 +10,8 @@
   "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4"
+    }
   },
   "vim_mode": false,
   "features": {
