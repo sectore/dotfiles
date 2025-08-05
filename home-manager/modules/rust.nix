@@ -16,7 +16,7 @@ in {
         "rustfmt"
         "clippy"
       ];
-      targets = ["x86_64-unknown-linux-gnu" "wasm32-unknown-unknown" "wasm32-wasip1"];
+      targets = ["x86_64-unknown-linux-gnu" "wasm32-unknown-unknown" "wasm32-wasip2"];
     })
     cargo-generate
     cargo-edit
