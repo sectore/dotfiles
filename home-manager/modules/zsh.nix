@@ -5,7 +5,7 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = false;
     shellAliases = {
-      # `nixGLNvidia-550.163.01` needs to be installed via `nix-channel` before
+      # `nixGLNvidia-575.64.03` needs to be installed via `nix-channel` before
       #  see https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
       nixGLNvidia = "nixGLNvidia-575.64.03";
       # extra git aliases (using `git` plugin of `oh-my-zsh`)
