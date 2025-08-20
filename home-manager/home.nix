@@ -86,6 +86,9 @@
     elmPackages.elm-live
     elmPackages.elm-land
 
+    # lean
+    lean4
+
     # misc
     just
     taplo # TOML tooklit https://taplo.tamasfe.dev/
