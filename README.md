@@ -120,7 +120,7 @@ which nixGL
 # install nixGLNvidia
 nix-env -if https://github.com/guibou/nixGL/archive/main.tar.gz -A auto.nixGLNvidia
 # double check
-which nixGLNvidia-575.64.03
+which nixGLNvidia-575.57.08
 # (after setting a symlink in `zsh.nix` and running `home-manager switch`)
 which nixGLNvidia
 ```
