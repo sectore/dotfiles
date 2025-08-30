@@ -103,35 +103,11 @@ Needed to run [`Zed`](https://zed.dev), [`Ghostty`](https://ghostty.org), [`Bevy
 
 From [Bevy's docs](https://github.com/bevyengine/bevy/blob/main/docs/linux_dependencies.md#nix):
 
-> If running nix on a non NixOS system (such as ubuntu, arch etc.), NixGL is additionally required, to link graphics drivers into the context of software installed by nix:
+> If running nix on a non NixOS system (such as ubuntu, arch etc.), NixGL is additionally required, to link graphics drivers into the context of software installed by nix.
 
-#### Installation
+`nixGL` is provided as an `input` in `home-manager/flake.nix` and configured in `home-manager/modules/nixgl.nix` based on `Home Managers` manual ["GPU on non-NixOS systems"](https://github.com/nix-community/home-manager/blob/master/docs/manual/usage/gpu-non-nixos.md).
 
-[nixGL docs](https://github.com/nix-community/nixGL?tab=readme-ov-file#nix-channel-recommended) recommends to install `nixGL` via `nix-channel`
-
-```sh
-# add channel
-nix-channel --add https://github.com/nix-community/nixGL/archive/main.tar.gz nixgl
-nix-channel --update
-# install nixGL
-nix-env -iA nixgl.auto.nixGLDefault
-# double check
-which nixGL
-# install nixGLNvidia
-nix-env -if https://github.com/guibou/nixGL/archive/main.tar.gz -A auto.nixGLNvidia
-# double check
-which nixGLNvidia-575.57.08
-# (after setting a symlink in `zsh.nix` and running `home-manager switch`)
-which nixGLNvidia
-```
-
-#### Uninstall
-
-```sh
-nix-env -e nixGL
-nix-channel --remove nixgl
-nix-channel --update
-```
+Programs can be wrapped with it `config.lib.nixGL.wrappers.nvidia`  (see `zed-editor` in `home-manager/home.nix`) or with `config.lib.nixGL.wrap` (see `Ghostty` in `home-manager/modules/terminal.nix`).
 
 ### `apparmor` profiles
 

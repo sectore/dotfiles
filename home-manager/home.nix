@@ -9,21 +9,13 @@
     ./modules/git.nix
     ./modules/go.nix
     ./modules/keychain.nix
+    ./modules/nixgl.nix
     ./modules/rust.nix
     ./modules/starship.nix
     ./modules/terminal.nix
     ./modules/unfree.nix
     ./modules/zsh.nix
   ];
-
-  # Notes about `NixGL`:
-  # (1) To import `nixgl`, it needs to be iqnstalled via `nix-channels` before.
-  # Check https://github.com/sectore/dotfiles?tab=readme-ov-file#nixgl
-  # (2) Configuration, see https://github.com/nix-community/home-manager/blob/master/docs/manual/usage/gpu-non-nixos.md
-  nixGL.packages = import <nixgl> {inherit pkgs;};
-  nixGL.defaultWrapper = "mesa";
-  nixGL.offloadWrapper = "nvidia";
-  nixGL.installScripts = ["mesa" "nvidia"];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -94,6 +86,7 @@
     taplo # TOML tooklit https://taplo.tamasfe.dev/
     simple-http-server
     vhs
+    ttyd # needed by vhs https://github.com/charmbracelet/vhs/blob/main/README.md#installation
 
     # Note: To avoid symlink related issues use `pkgs.zed-editor` instead of `programs.zed-editor`
     # see https://github.com/sectore/dotfiles?tab=readme-ov-file#checkout-and-symlink-dotfiles for more details.
