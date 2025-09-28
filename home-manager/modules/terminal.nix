@@ -10,8 +10,8 @@
     package = config.lib.nixGL.wrap pkgs.ghostty;
     settings = {
       font-size = 12;
-      # https://ghostty.org/docs/config/reference#theme
-      theme = "OneHalfLight";
+      # `ghostty +list-themes` OR https://ghostty.org/docs/config/reference#theme
+      theme = "One Half Light";
       # https://ghostty.org/docs/config/reference#cursor-style
       cursor-style = "block";
     };
