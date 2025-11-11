@@ -1,9 +1,11 @@
 {...}: {
   programs.git = {
     enable = true;
-    userName = "jk";
-    userEmail = "47693+sectore@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "jk";
+        email = "47693+sectore@users.noreply.github.com";
+      };
       init.defaultBranch = "main";
       url = {
         "ssh://git@github.com/" = {
