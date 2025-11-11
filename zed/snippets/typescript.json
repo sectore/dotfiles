@@ -1,0 +1,6 @@
+{
+  "console.info": {
+    "prefix": "clo",
+    "body": ["console.info(\"${1:World}!\")", "$0"]
+  }
+}
