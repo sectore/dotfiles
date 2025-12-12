@@ -71,22 +71,22 @@
     # mise
 
     # elm
-    elmPackages.elm
-    elmPackages.elm-format
-    elmPackages.elm-test
-    elmPackages.elm-review
-    elmPackages.elm-live
-    elmPackages.elm-land
+    # elmPackages.elm
+    # elmPackages.elm-format
+    # elmPackages.elm-test
+    # elmPackages.elm-review
+    # elmPackages.elm-live
+    # elm-land
 
     # lean
-    lean4
+    # lean4
 
     # misc
     just
     taplo # TOML tooklit https://taplo.tamasfe.dev/
     simple-http-server
     vhs
-    ttyd # needed by vhs https://github.com/charmbracelet/vhs/blob/main/README.md#installation
+    # ttyd # needed by vhs https://github.com/charmbracelet/vhs/blob/main/README.md#installation
 
     # Note: To avoid symlink related issues use `pkgs.zed-editor` instead of `programs.zed-editor`
     # see https://github.com/sectore/dotfiles?tab=readme-ov-file#checkout-and-symlink-dotfiles for more details.
