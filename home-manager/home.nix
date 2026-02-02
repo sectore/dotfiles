@@ -53,6 +53,7 @@
     discord
 
     # nix
+    devenv
     nil
     nixd
     nix-info
