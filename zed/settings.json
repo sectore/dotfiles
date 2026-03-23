@@ -10,31 +10,31 @@
   "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    }
+      "model": "claude-sonnet-4",
+    },
   },
   "vim_mode": false,
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "none",
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
-    "mode": "system",
-    "light": "One Dark",
-    "dark": "One Dark"
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark",
   },
   "languages": {
     "Nix": {
-      "language_servers": ["nixd", "nil"]
+      "language_servers": ["nixd", "nil"],
     },
     "TOML": {
-      "language_servers": ["taplo"]
-    }
+      "language_servers": ["taplo"],
+    },
   },
   "lsp": {
     // Specify the LSP name as a key here.
@@ -42,32 +42,32 @@
       // These initialization options are merged into Zed's defaults
       "initialization_options": {
         "check": {
-          "command": "clippy" // rust-analyzer.check.command (default: "check")
-        }
-      }
+          "command": "clippy", // rust-analyzer.check.command (default: "check")
+        },
+      },
     },
     "nixd": {
       "binary": {
-        "path": "nixd"
+        "path": "nixd",
       },
 
       "settings": {
         "formatting": {
-          "command": ["alejandra"]
-        }
-      }
+          "command": ["alejandra"],
+        },
+      },
     },
     "nil": {
       "binary": {
-        "path": "nil"
-      }
+        "path": "nil",
+      },
     },
     "taplo": {
       "binary": {
         "path": "taplo",
-        "arguments": ["lsp", "stdio"]
-      }
-    }
+        "arguments": ["lsp", "stdio"],
+      },
+    },
   },
   // Add extensions here (don't install it via Zed's UI).
   //
@@ -83,12 +83,12 @@
     "html": true,
     "lean4": true,
     "just": true,
-    "just-ls": true,
     "nix": true,
     "svelte": true,
     "oxc": true,
     "sql": true,
     "toml": true,
-    "vue": true
-  }
+    "vue": true,
+    "zig": true,
+  },
 }
