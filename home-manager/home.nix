@@ -42,7 +42,7 @@
     httpie
     htop
     jq
-    neofetch
+    fastfetch
     onefetch
     openssh
     pdftk
