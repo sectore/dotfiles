@@ -33,9 +33,4 @@
     terminal = false;
     # Note: No DBusActivatable here
   };
-
-  # https://github.com/sectore/timr-tui
-  home.packages = with pkgs; [
-    (timr-tui.override {enableSound = true;})
-  ];
 }
