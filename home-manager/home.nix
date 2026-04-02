@@ -63,8 +63,8 @@
     # node and stuff
     # fnm # Fast Node Manager https://github.com/Schniz/fnm
     bun
-    nodejs_22
-    nodejs_22.pkgs.pnpm
+    nodejs_24
+    pnpm
     typescript
     yarn
     # deno
