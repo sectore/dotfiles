@@ -4,7 +4,7 @@
     signing.format = "ssh";
     settings = {
       user = {
-        name = "jk";
+        name = "Jens Krause";
         email = "47693+sectore@users.noreply.github.com";
       };
       init.defaultBranch = "main";
