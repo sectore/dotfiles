@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "none",
+  },
+  "agent_servers": {
+    "amp-acp": {
+      "type": "registry",
+    },
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
   "agent": {
     "default_model": {
       "provider": "zed.dev",
@@ -14,9 +25,6 @@
     },
   },
   "vim_mode": false,
-  "features": {
-    "edit_prediction_provider": "none",
-  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
