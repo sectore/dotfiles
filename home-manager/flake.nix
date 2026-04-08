@@ -3,9 +3,7 @@
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
-    # Pinned to commit before ec81f6c, which introduced claude-code 2.1.88 with a broken npm URL (404).
-    # Revert to "nixos-unstable" once nixpkgs ships a working claude-code version.
-    nixpkgs.url = "github:nixos/nixpkgs/55f3084e5d0eb14522f5be012562f80681f50886";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
