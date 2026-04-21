@@ -57,6 +57,8 @@
     nil
     nixd
     nix-info
+    nixpkgs-review
+    nix-update
     alejandra
     cachix
 
