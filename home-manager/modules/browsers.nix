@@ -12,6 +12,10 @@
 
   programs.chromium = {
     enable = true;
-    commandLineArgs = ["--no-default-browser-check"];
+    commandLineArgs = [
+      "--no-default-browser-check"
+      "--use-gl=angle"
+      "--use-angle=gl"
+    ];
   };
 }
