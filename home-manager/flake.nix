@@ -18,6 +18,11 @@
       url = "github:KeeTraxx/nixgl/fix-nvidia-kernel-param";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # https://nix-community.github.io/nixpkgs-update/
+    nixpkgs-update = {
+      url = "github:ryantm/nixpkgs-update";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
