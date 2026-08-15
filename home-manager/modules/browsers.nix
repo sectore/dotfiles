@@ -1,7 +1,12 @@
-{...}: {
+{pkgs, ...}: {
   programs.brave = {
     enable = true;
-    commandLineArgs = ["--no-default-browser-check"];
+    # error: attribute 'override' missing
+    package = pkgs.brave.overrideAttrs (oldAttrs: {
+          commandLineArgs = [
+            "--no-default-browser-check"
+          ];
+        });
     extensions = [];
   };
 
