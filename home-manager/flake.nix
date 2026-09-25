@@ -14,8 +14,8 @@
     };
     nixgl = {
       # url = "github:nix-community/nixgl";
-      # TODO: Back to `main` as soon as #221 comes in.
-      url = "github:KeeTraxx/nixgl/fix-nvidia-kernel-param";
+      # TODO: Back to `main` as soon as #226 comes in. Pinned to a commit (checked 25-09-26).
+      url = "github:catouc/nixGL/83a154719e5d8f68f89e5148d123dcb129b976c3";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # https://nix-community.github.io/nixpkgs-update/
