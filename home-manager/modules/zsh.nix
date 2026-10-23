@@ -26,14 +26,6 @@
       # example: `$ a git`
       a() { alias | grep "$1"; }
 
-      # pnpm https://pnpm.io/
-      export PNPM_HOME="$HOME/.nix-profile/bin/pnpm"
-      case ":$PATH:" in
-        *":$PNPM_HOME:"*) ;;
-        *) export PATH="$PNPM_HOME:$PATH" ;;
-      esac
-      # pnpm end
-
     '';
 
     oh-my-zsh = {
