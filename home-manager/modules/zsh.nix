@@ -34,8 +34,6 @@
       esac
       # pnpm end
 
-      # https://mise.jdx.dev/installing-mise.html#zsh
-      # eval "$(mise activate zsh)"
     '';
 
     oh-my-zsh = {

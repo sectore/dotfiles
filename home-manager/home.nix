@@ -9,6 +9,7 @@
     ./modules/git.nix
     ./modules/go.nix
     ./modules/keychain.nix
+    ./modules/mise.nix
     ./modules/nixgl.nix
     ./modules/rust.nix
     ./modules/starship.nix
@@ -70,8 +71,6 @@
     typescript
     yarn
     # deno
-    # https://mise.jdx.dev/
-    # mise
 
     # elm
     # elmPackages.elm
