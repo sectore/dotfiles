@@ -121,13 +121,67 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1792502884,
+        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "purescript-iris": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1792655025,
+        "narHash": "sha256-gPZ+93j9dcnIjN+eoZ6R84rUbI0bbNhIGq8MBNvCfYs=",
+        "owner": "purefunctor",
+        "repo": "purescript-iris",
+        "rev": "9b567d5958a3a057e648ff34c5a53a379ac03417",
+        "type": "github"
+      },
+      "original": {
+        "owner": "purefunctor",
+        "ref": "v0.1.11",
+        "repo": "purescript-iris",
+        "type": "github"
+      }
+    },
+    "purescript-iris-nix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2",
+        "purescript-iris": "purescript-iris",
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1792846105,
+        "narHash": "sha256-SrEnxB1yMU1ibwqZYHoFH3FdvC4x5HEps0lPt/SW7k4=",
+        "owner": "sectore",
+        "repo": "purescript-iris-nix",
+        "rev": "ff1dfda9a0d12342f668a417916d8b43bc47cef0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sectore",
+        "repo": "purescript-iris-nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixgl": "nixgl",
         "nixpkgs": "nixpkgs",
         "nixpkgs-update": "nixpkgs-update",
-        "rust-overlay": "rust-overlay"
+        "purescript-iris-nix": "purescript-iris-nix",
+        "rust-overlay": "rust-overlay_2"
       }
     },
     "runtimeDeps": {
@@ -147,6 +201,27 @@
       }
     },
     "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "purescript-iris-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792825530,
+        "narHash": "sha256-aphXA2IFNd3q48++TKmfuuvDDjkrgGdJDnDIhij9684=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "5b9f1198b59bcb31c5c3250b332e7d77590e6306",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_2": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"

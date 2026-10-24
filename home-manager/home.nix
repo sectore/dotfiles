@@ -8,6 +8,7 @@
     ./modules/direnv.nix
     ./modules/git.nix
     ./modules/go.nix
+    ./modules/iris.nix
     ./modules/keychain.nix
     ./modules/mise.nix
     ./modules/nixgl.nix
