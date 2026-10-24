@@ -4,7 +4,7 @@
   ...
 }: let
   rustPkgs = import pkgs.path {
-    inherit (pkgs) system;
+    inherit (pkgs.stdenv.hostPlatform) system;
     overlays = [(import inputs.rust-overlay)];
   };
 in {
