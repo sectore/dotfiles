@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1765121682,
+        "narHash": "sha256-4VBOP18BFeiPkyhy9o4ssBNQEvfvv1kXkasAYd0+rrA=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "65f23138d8d09a92e30f1e5c87611b23ef451bf3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -174,6 +190,27 @@
         "type": "github"
       }
     },
+    "purescript-overlay": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791902694,
+        "narHash": "sha256-nc2zRpoTCmbTnZ72jN3c2HVbfPKG9HapHamIMMDE7WU=",
+        "owner": "thomashoneyman",
+        "repo": "purescript-overlay",
+        "rev": "8046182d2b23144cbb4370dabc5cc7b632bf7c02",
+        "type": "github"
+      },
+      "original": {
+        "owner": "thomashoneyman",
+        "repo": "purescript-overlay",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -181,6 +218,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-update": "nixpkgs-update",
         "purescript-iris-nix": "purescript-iris-nix",
+        "purescript-overlay": "purescript-overlay",
         "rust-overlay": "rust-overlay_2"
       }
     },

@@ -12,6 +12,10 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    purescript-overlay = {
+      url = "github:thomashoneyman/purescript-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Iris (PureScript), built from source. No `follows` on purpose: Iris keeps
     # the nixpkgs pinned by purescript-iris-nix, so nixpkgs updates here don't
     # rebuild it. Upgrade with `nix flake update purescript-iris-nix`.

@@ -12,6 +12,7 @@
     ./modules/keychain.nix
     ./modules/mise.nix
     ./modules/nixgl.nix
+    ./modules/purescript.nix
     ./modules/rust.nix
     ./modules/starship.nix
     ./modules/terminal.nix
