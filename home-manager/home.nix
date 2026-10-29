@@ -17,6 +17,7 @@
     ./modules/starship.nix
     ./modules/terminal.nix
     ./modules/unfree.nix
+    ./modules/zoom.nix
     ./modules/zsh.nix
   ];
 

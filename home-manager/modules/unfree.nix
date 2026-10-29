@@ -4,5 +4,6 @@
       "claude-code"
       "discord"
       "discord-unwrapped"
+      "zoom"
     ];
 }
