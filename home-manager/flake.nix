@@ -59,6 +59,19 @@
           packages = import nixgl {
             pkgs = import nixpkgs {
               inherit system;
+              # `pcre` was removed from nixpkgs (EOL), but nixGL's `checkPhase` still calls `pcregrep`.
+              # Shim it with `pcre2grep`, which supports the same `-o0` usage.
+              # TODO: Drop once https://github.com/nix-community/nixGL/pull/227 is merged
+              # OR
+              # https://github.com/nix-community/nixGL/pull/226 includes that fix
+              overlays = [
+                (final: _prev: {
+                  pcre = final.runCommand "pcregrep-shim" {} ''
+                    mkdir -p $out/bin
+                    ln -s ${final.lib.getBin final.pcre2}/bin/pcre2grep $out/bin/pcregrep
+                  '';
+                })
+              ];
               config = {
                 # Note: `allowUnfreePredicate` has to be defined here!
                 # Defining it in `modules/unfree.nix` or `modules/nixgl.nix` does not work.
